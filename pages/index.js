@@ -4,16 +4,19 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import Projects from "../components/Projects";
+import { StylesProvider } from "@mui/styles";
 
 export default function Home() {
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <Projects />
-      <AboutMe />
-      <Contact />
-      <Footer />
-    </div>
+    <StylesProvider>
+      <div>
+        <Navbar />
+        <Hero />
+        <Projects />
+        <AboutMe />
+        <Contact />
+        <Footer />
+      </div>
+    </StylesProvider>
   );
 }
