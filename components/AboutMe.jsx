@@ -4,11 +4,11 @@ import { LinkedIn, FacebookOutlined, Twitter, GitHub, Instagram } from "@mui/ico
 
 const Btn = ({ href, Icon }) => {
   return (
-      <a href={href} target={"_blank"}>
-        <Button>
-          <Icon />
-        </Button>
-      </a>
+    <a href={href} target={"_blank"} rel="noreferrer">
+      <Button>
+        <Icon />
+      </Button>
+    </a>
   );
 };
 
@@ -56,7 +56,7 @@ const AboutMe = () => {
           <span className="font-extrabold text-light-accent dark:text-d-accent">Front-end developer</span> and solve their problems.
         </p>
         <p className="font-body text-base md:text-xl tracking-wide mb-3">
-          I've worked with a wide range of people from different backgrounds and demographics. This has enabled me to adapt and become{" "}
+          I have worked with a wide range of people from different backgrounds and demographics. This has enabled me to adapt and become
           <span className="font-extrabold text-light-accent dark:text-d-accent ">flexible</span> in the workplace.
         </p>
         <p className="font-body text-base md:text-xl tracking-wide mb-3 flex justify-center items-center  hover:shadow-2xl rounded-lg border-indigo-400 border-2 p-3">

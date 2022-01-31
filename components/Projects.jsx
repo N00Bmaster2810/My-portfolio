@@ -48,7 +48,7 @@ const Projects = () => {
                   <img src={callout.imageSrc} alt={callout.imageAlt} className="w-full cursor-pointer hover:opacity-75 h-full object-center object-cover" />
                 </div>
                 <p className="mt-6 flex justify-between font-semibold text-gray-900 my-5">
-                  <a target={"_blank"} href={callout.href} className="text-xl">
+                  <a target={"_blank"} href={callout.href} className="text-xl" rel="noreferrer">
                     {callout.name}
                   </a>
                   <button className="bg-slate-200 p-2 rounded-lg transition ease-in-out flex justify-betweenitems-center hover:-translate-y-1 hover:scale-105 hover:bg-indigo-200 duration-300">
@@ -73,19 +73,19 @@ const Projects = () => {
                       ))}
                     </div>
                     <p>
-                        <RWebShare
-                          data={{
-                            text: "Hey, checkout this awesome project on GitHub",
-                            url: callout.href,
-                            title: "Hey, checkout this awesome project on GitHub",
-                          }}
-                          sites={["facebook", "twitter", "whatsapp", "reddit", "telegram", "linkedin", "mail", "copy"]}
-                          onClick={() => console.log("shared successfully!")}
-                          className="px-2"
-                        >
-                          <button>Share</button>
-                        </RWebShare>
-                        <ShareIcon color={"action"} fontSize="small" />
+                      <RWebShare
+                        data={{
+                          text: "Hey, checkout this awesome project on GitHub",
+                          url: callout.href,
+                          title: "Hey, checkout this awesome project on GitHub",
+                        }}
+                        sites={["facebook", "twitter", "whatsapp", "reddit", "telegram", "linkedin", "mail", "copy"]}
+                        onClick={() => console.log("shared successfully!")}
+                        className="px-2"
+                      >
+                        <button>Share</button>
+                      </RWebShare>
+                      <ShareIcon color={"action"} fontSize="small" />
                     </p>
                   </div>
                 </div>

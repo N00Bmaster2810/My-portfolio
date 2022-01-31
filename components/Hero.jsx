@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="grid md:grid-cols-2 grid-cols-1 gap-4 ">
         <div className="flex flex-col items-center justify-center white-glassmorphism">
           <div>
-            <p className="md:text-7xl text-5xl font-serif tracking-widest text-gradient my-5">Hello, I'm</p>
+            <p className="md:text-7xl text-5xl font-serif tracking-widest text-gradient my-5">Hello, I&apos;m</p>
             <p className="md:text-7xl text-4xl font-serif tracking-wider mt-8">Satya Prakash</p>
             <p className="md:text-7xl text-4xl font-serif tracking-wider mb-8">Satyam</p>
             <p className="text-3xl font-serif tracking-wider my-2">Full stack Developer</p>
