@@ -37,7 +37,7 @@ const Navbar = () => {
       </div>
       <ul className="md:flex hidden list-none flex-row justify-between items-center flex-initial">
         {navs.map((item, index) => (
-          <NavbarItem key={item + index} classProps={"text-white"} title={item.title} link={item.link} />
+          <NavbarItem key={index} classProps={"text-white"} title={item.title} link={item.link} />
         ))}
       </ul>
       <div className="flex-relative">
