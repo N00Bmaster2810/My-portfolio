@@ -8,7 +8,7 @@ import { StylesProvider } from "@mui/styles";
 
 export default function Home() {
   return (
-    <StylesProvider>
+    <StylesProvider injectFirst>
       <div>
         <Navbar />
         <Hero />
