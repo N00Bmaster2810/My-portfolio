@@ -53,7 +53,7 @@ const Projects = () => {
                   </a>
                   <button className="bg-slate-200 p-2 rounded-lg transition ease-in-out flex justify-betweenitems-center hover:-translate-y-1 hover:scale-105 hover:bg-indigo-200 duration-300">
                     <CodeIcon className="pr-2" fontSize="medium" color="action" />
-                    <a target="_blank" href={callout.href} className="no-underline">
+                    <a target="_blank" href={callout.href} className="no-underline" rel="noreferrer">
                       Visit
                     </a>
                   </button>
