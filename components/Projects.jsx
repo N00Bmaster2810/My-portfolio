@@ -46,11 +46,11 @@ const Projects = () => {
                 <div className="w-full h-full bg-white rounded-lg sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
                   <img src={callout.imageSrc} alt={callout.imageAlt} className="w-full cursor-pointer hover:opacity-75 h-full hover:scale-120" />
                 </div>
-                <p className="mt-6 flex justify-between font-semibold text-gradient my-5">
+                <p className="mt-6 flex justify-between font-semibold text-gradient my-5 underline">
                   <a target={"_blank"} href={callout.href} className="text-xl" rel="noreferrer">
                     {callout.name}
                   </a>
-                  <button className="bg-[#f2e68f] p-2 rounded-lg transition ease-in-out flex justify-between items-center hover:-translate-y-1 hover:scale-105 hover:bg-[#F52D04] duration-300">
+                  <button className="bg-[#f2e68f] p-2 rounded-lg transition ease-in-out flex justify-between items-center hover:-translate-y-1 hover:scale-105 hover:bg-[#FB9039] duration-300">
                     <a target="_blank" href={callout.href} className="font-semibold text-black" rel="noreferrer">
                       <AiOutlineCode size="2em" className="p-1" fontSize="medium" />
                     </a>
@@ -67,7 +67,7 @@ const Projects = () => {
                         </span>
                       ))}
                     </div>
-                    <p className="flex items-center text-[#f2e68f] border rounded-lg p-2 hover:bg-[#F52D04]">
+                    <p className="flex items-center text-[#f2e68f] border rounded-lg p-2 hover:-translate-y-1 hover:scale-105 hover:bg-[#FB9039] duration-300">
                       <AiOutlineShareAlt size="1.5em" color={"action"} className="mr-2" />
                       <RWebShare
                         data={{

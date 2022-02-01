@@ -3,7 +3,7 @@ import Image from "next/image";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 const NavbarItem = ({ title, classProps, link }) => {
   return (
-    <a href={link} className={`mx-4 cursor-pointer btn-grad transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300 ${classProps} p-2`}>
+    <a href={link} className={`mx-2 cursor-pointer btn-grad transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300 ${classProps} p-1`}>
       <btn>{title}</btn>
     </a>
   );
@@ -36,7 +36,7 @@ const Navbar = () => {
         <a
           href="\resume.pdf"
           download
-          className={`mx-4 cursor-pointer text-white btn-grad transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300 p-2`}
+          className={`mx-2 cursor-pointer text-white btn-grad transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300 p-1`}
         >
           <btn>Get Resume</btn>
         </a>
@@ -58,7 +58,7 @@ const Navbar = () => {
             <a
               href="\resume.pdf"
               download
-              className={`mx-4 cursor-pointer text-white btn-grad transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300 p-2 my-2 text-lg`}
+              className={`mx-2 cursor-pointer text-white btn-grad transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300 p-1 my-2 text-lg`}
             >
               <btn>Get Resume</btn>
             </a>
