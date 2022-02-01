@@ -35,24 +35,24 @@ const callouts = [
 
 const Projects = () => {
   return (
-    <div className="my-5">
+    <div className="my-5" id="project">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto py-16 sm:py-24 lg:py-32 lg:max-w-none">
-          <p className="text-5xl font-bold tracking-widest text-gradient my-5">Projects</p>
+          <p className="text-6xl font-bold tracking-widest text-gradient pb-5">Projects</p>
 
           <div className="mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-2 md:gap-6">
             {callouts.map((callout, e) => (
               <div key={e} className="white-glassmorphism p-5">
-                <div className="w-full h-80 bg-white rounded-lg overflow-hidden  sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-                  <img src={callout.imageSrc} alt={callout.imageAlt} className="w-full cursor-pointer hover:opacity-75 h-full object-center object-cover" />
+                <div className="w-full h-full bg-white rounded-lg sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                  <img src={callout.imageSrc} alt={callout.imageAlt} className="w-full cursor-pointer hover:opacity-75 h-full hover:scale-120" />
                 </div>
                 <p className="mt-6 flex justify-between font-semibold text-gradient my-5">
                   <a target={"_blank"} href={callout.href} className="text-xl" rel="noreferrer">
                     {callout.name}
                   </a>
                   <button className="bg-[#f2e68f] p-2 rounded-lg transition ease-in-out flex justify-between items-center hover:-translate-y-1 hover:scale-105 hover:bg-[#F52D04] duration-300">
-                    <a target="_blank" href={callout.href} className="text-b font-semibold" rel="noreferrer">
-                      <AiOutlineCode size="2em" className="pr-2" fontSize="medium" color="action" />
+                    <a target="_blank" href={callout.href} className="font-semibold text-black" rel="noreferrer">
+                      <AiOutlineCode size="2em" className="p-1" fontSize="medium" />
                     </a>
                   </button>
                 </p>
@@ -67,8 +67,8 @@ const Projects = () => {
                         </span>
                       ))}
                     </div>
-                    <p className="flex items-center text-[#f2e68f]">
-                      <AiOutlineShareAlt size="1.5em" color={"action"} className="mx-2" />
+                    <p className="flex items-center text-[#f2e68f] border rounded-lg p-2 hover:bg-[#F52D04]">
+                      <AiOutlineShareAlt size="1.5em" color={"action"} className="mr-2" />
                       <RWebShare
                         data={{
                           text: "Hey, checkout this awesome project on GitHub",
@@ -77,7 +77,6 @@ const Projects = () => {
                         }}
                         sites={["facebook", "twitter", "whatsapp", "reddit", "telegram", "linkedin", "mail", "copy"]}
                         onClick={() => console.log("shared successfully!")}
-                        className="px-2"
                       >
                         <button>Share</button>
                       </RWebShare>

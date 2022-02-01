@@ -4,26 +4,27 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import Projects from "../components/Projects";
-import { StylesProvider } from "@mui/styles";
+import Head from "next/head";
 
 export default function Home() {
   return (
-    <StylesProvider injectFirst>
-      <div>
-        <Navbar />
-        <Hero />
-        <hr />
-        <Projects />
-        <hr />
+    <div>
+      <Head>
+        <title>My Portfolio</title>
+      </Head>
+      <Navbar id="navbar" />
+      <Hero id="hero" />
+      <hr />
+      <Projects id="project" />
+      <hr />
 
-        <AboutMe />
-        <hr />
+      <AboutMe id="about" />
+      <hr />
 
-        <Contact />
-        <hr />
+      <Contact id="contact" />
+      <hr />
 
-        <Footer />
-      </div>
-    </StylesProvider>
+      <Footer id="footer" />
+    </div>
   );
 }
