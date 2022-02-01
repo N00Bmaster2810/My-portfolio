@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FormGroup, TextField, Button, Alert } from "@mui/material";
-import { Send } from "@mui/icons-material";
+import { AiOutlineSend } from "react-icons/ai";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -92,7 +92,7 @@ const Contact = () => {
               />
             </FormGroup>
           </form>
-          <Button className="bg-indigo-900" variant="contained" type="submit" endIcon={<Send />} onClick={(e) => handleSubmit(e)}>
+          <Button className="bg-indigo-900" variant="contained" type="submit" endIcon={<AiOutlineSend /> } onClick={(e) => handleSubmit(e)}>
             Send
           </Button>
         </div>

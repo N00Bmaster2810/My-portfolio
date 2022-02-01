@@ -1,8 +1,7 @@
 import { Button, Chip } from "@mui/material";
 import React from "react";
-import CodeIcon from "@mui/icons-material/Code";
-import ShareIcon from "@mui/icons-material/Share";
 import { RWebShare } from "react-web-share";
+import { AiOutlineCode, AiOutlineShareAlt } from "react-icons/ai";
 
 const callouts = [
   {
@@ -51,8 +50,8 @@ const Projects = () => {
                   <a target={"_blank"} href={callout.href} className="text-xl" rel="noreferrer">
                     {callout.name}
                   </a>
-                  <button className="bg-slate-200 p-2 rounded-lg transition ease-in-out flex justify-betweenitems-center hover:-translate-y-1 hover:scale-105 hover:bg-indigo-200 duration-300">
-                    <CodeIcon className="pr-2" fontSize="medium" color="action" />
+                  <button className="bg-slate-200 p-2 rounded-lg transition ease-in-out flex justify-between items-center hover:-translate-y-1 hover:scale-105 hover:bg-indigo-200 duration-300">
+                    <AiOutlineCode size="2em" className="pr-2" fontSize="medium" color="action" />
                     <a target="_blank" href={callout.href} className="no-underline" rel="noreferrer">
                       Visit
                     </a>
@@ -64,15 +63,11 @@ const Projects = () => {
                   <div className="flex justify-between items-center">
                     <div>
                       {callout.stack.map((st, e) => (
-                        <Chip
-                          key={e}
-                          label={`# ${st}`}
-                          variant="outlined"
-                          className="inline-block bg-gray-200 bg-opacity-50 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-                        />
+                        <span className="inline-block bg-gray-200 bg-opacity-50 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" key={e}># {st}</span>
                       ))}
                     </div>
-                    <p>
+                    <p className="flex items-center">
+                      <AiOutlineShareAlt size="1.5em" color={"action"} className="mx-2" />
                       <RWebShare
                         data={{
                           text: "Hey, checkout this awesome project on GitHub",
@@ -85,7 +80,7 @@ const Projects = () => {
                       >
                         <button>Share</button>
                       </RWebShare>
-                      <ShareIcon color={"action"} fontSize="small" />
+                      
                     </p>
                   </div>
                 </div>

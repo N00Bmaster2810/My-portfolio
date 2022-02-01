@@ -1,13 +1,13 @@
 import React from "react";
 import { Button, ButtonGroup } from "@mui/material";
-import { LinkedIn, FacebookOutlined, Twitter, GitHub, Instagram } from "@mui/icons-material";
+import { AiFillLinkedin, AiFillFacebook, AiFillTwitterCircle, AiOutlineGithub, AiOutlineInstagram } from "react-icons/ai";
 
 const Btn = ({ href, Icon }) => {
   return (
-    <a href={href} target={"_blank"} rel="noreferrer">
-      <Button>
-        <Icon />
-      </Button>
+    <a href={href} target={"_blank"} rel="noreferrer" className="p-2 hover:bg-[#F52D04] hover:rounded-lg">
+      <btn className="">
+        <Icon size="1.5em"/>
+      </btn>
     </a>
   );
 };
@@ -15,27 +15,27 @@ const Btn = ({ href, Icon }) => {
 const social = [
   {
     href: "https://www.linkedin.com/in/satyaprakashsatyam/",
-    icon: LinkedIn,
+    icon: AiFillLinkedin,
     key: "one",
   },
   {
     href: "https://www.facebook.com/profile.php?id=100055258875692",
-    icon: FacebookOutlined,
+    icon: AiFillFacebook,
     key: "two",
   },
   {
     href: "https://twitter.com/itsme_satty",
-    icon: Twitter,
+    icon: AiFillTwitterCircle,
     key: "three",
   },
   {
     href: "https://github.com/N00Bmaster2810",
-    icon: GitHub,
+    icon: AiOutlineGithub,
     key: "four",
   },
   {
     href: "https://www.instagram.com/its_me.satya/",
-    icon: Instagram,
+    icon: AiOutlineInstagram,
     key: "five",
   },
 ];
@@ -61,11 +61,11 @@ const AboutMe = () => {
         </p>
         <p className="font-body text-base md:text-xl tracking-wide mb-3 flex justify-center items-center  hover:shadow-2xl rounded-lg border-indigo-400 border-2 p-3">
           <span className="font-bold text-light-accent dark:text-d-accent px-4">Follow me on:</span>
-          <ButtonGroup variant="contained" color="warning" aria-label="outlined warning button group">
+          <div className="flex justify-center place-content-stretch">
             {social.map((e, i) => (
               <Btn href={e.href} Icon={e.icon} key={i} />
             ))}
-          </ButtonGroup>
+          </div>
         </p>
       </div>
     </div>

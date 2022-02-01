@@ -1,16 +1,15 @@
 import { useState } from "react";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@mui/material";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 const NavbarItem = ({ title, classProps, link }) => {
   return (
-    <Button
-      className={`mx-4 cursor-pointer btn-grad transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300 ${classProps}`}
+    <btn
+      className={`mx-4 cursor-pointer btn-grad transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300 ${classProps} p-2`}
     >
       <Link href={link}>{title}</Link>
-    </Button>
+    </btn>
   );
 };
 
@@ -42,14 +41,14 @@ const Navbar = () => {
       </ul>
       <div className="flex-relative">
         {toggleMenu ? (
-          <CloseIcon className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(false)} />
+          <AiOutlineClose size="2" className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(false)} />
         ) : (
-          <MenuIcon className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(true)} />
+          <AiOutlineMenu size="1.5em" className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(true)} />
         )}
         {toggleMenu && (
           <ul className="z-10 fixed top-0 -right-2 p-3 w-[70vw] h-screen shadow-2xl md:hidden list-none flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in">
             <li className="text-xl w-full my-2">
-              <CloseIcon className="cursor-pointer" onClick={() => setToggleMenu(false)} />
+              <AiOutlineClose className="cursor-pointer" onClick={() => setToggleMenu(false)} />
             </li>
             {navs.map((item, index) => (
               <NavbarItem key={item + index} title={item.title} link={item.link} classProps="my-2 text-lg " />
