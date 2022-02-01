@@ -16,15 +16,22 @@ const contact = async (req, res) => {
     to: "satty9509@gmail.com",
     subject: `Message From ${req.body.name}`,
     text: req.body.message + " | Sent from: " + req.body.email,
-    html: `<div>${req.body.message}</div><p>Sent from:
-    ${req.body.email}</p>`,
+    html: `
+    <div>
+      <p>Hey Satya, there is a message from ${req.body.email}</p>
+      <br/>
+      <p>I'm ${req.body.name}</p>
+      <p>${req.body.message}</p>
+    </div>`,
   };
   try {
     transporter.sendMail(mailData, function (err, info) {
       if (err) console.log(err);
-      else console.log(info);
+      else {
+        console.log(info)
+        res.status(200).send(info);
+      }
     });
-    res.status(200);
   } catch (e) {
 	  res.status(404).send(e);
   }

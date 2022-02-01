@@ -12,9 +12,16 @@ export default function Home() {
       <div>
         <Navbar />
         <Hero />
+        <hr />
         <Projects />
+        <hr />
+
         <AboutMe />
+        <hr />
+
         <Contact />
+        <hr />
+
         <Footer />
       </div>
     </StylesProvider>

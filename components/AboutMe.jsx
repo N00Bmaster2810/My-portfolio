@@ -49,17 +49,17 @@ const AboutMe = () => {
         </div>
       </div>
       <div className="w-full md:w-4/4 flex flex-col justify-between items-center lg:w-2/4 p-2 md:p-6 ">
-        <p className="text-5xl font-serif tracking-widest text-[#F52D04] my-5">About Me</p>
-        <p className="font-body text-base md:text-xl tracking-wide my-4">
+        <p className="text-5xl font-semibold tracking-widest text-gradient my-5">About Me</p>
+        <p className="font-body text-[#f2e68f] md:text-xl tracking-wide my-4">
           I am a web developer that comes from a teaching and <span className="font-extrabold text-light-accent dark:text-d-accent">Business background</span> .
           Through my past experiences, I can balance the need of users and businesses to understand their pain points and how I can contribute as a{" "}
           <span className="font-extrabold text-light-accent dark:text-d-accent">Front-end developer</span> and solve their problems.
         </p>
-        <p className="font-body text-base md:text-xl tracking-wide mb-3">
-          I have worked with a wide range of people from different backgrounds and demographics. This has enabled me to adapt and become
-          <span className="font-extrabold text-light-accent dark:text-d-accent ">flexible</span> in the workplace.
+        <p className="font-body text-[#f2e68f] md:text-xl tracking-wide mb-3">
+          I have worked with a wide range of people from different backgrounds and demographics. This has enabled me to adapt and become 
+          <span className="font-extrabold text-light-accent dark:text-d-accent "> flexible</span> in the workplace.
         </p>
-        <p className="font-body text-base md:text-xl tracking-wide mb-3 flex justify-center items-center  hover:shadow-2xl rounded-lg border-indigo-400 border-2 p-3">
+        <p className="font-body text-[#f2e68f] md:text-xl tracking-wide mb-3 flex justify-center items-center  hover:shadow-2xl rounded-lg border-indigo-400 border-2 p-3">
           <span className="font-bold text-light-accent dark:text-d-accent px-4">Follow me on:</span>
           <div className="flex justify-center place-content-stretch">
             {social.map((e, i) => (

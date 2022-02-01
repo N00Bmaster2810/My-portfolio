@@ -38,7 +38,7 @@ const Projects = () => {
     <div className="my-5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto py-16 sm:py-24 lg:py-32 lg:max-w-none">
-          <p className="text-5xl font-serif tracking-widest text-gradient my-5">Projects</p>
+          <p className="text-5xl font-bold tracking-widest text-gradient my-5">Projects</p>
 
           <div className="mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-2 md:gap-6">
             {callouts.map((callout, e) => (
@@ -46,27 +46,28 @@ const Projects = () => {
                 <div className="w-full h-80 bg-white rounded-lg overflow-hidden  sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
                   <img src={callout.imageSrc} alt={callout.imageAlt} className="w-full cursor-pointer hover:opacity-75 h-full object-center object-cover" />
                 </div>
-                <p className="mt-6 flex justify-between font-semibold text-gray-900 my-5">
+                <p className="mt-6 flex justify-between font-semibold text-gradient my-5">
                   <a target={"_blank"} href={callout.href} className="text-xl" rel="noreferrer">
                     {callout.name}
                   </a>
-                  <button className="bg-slate-200 p-2 rounded-lg transition ease-in-out flex justify-between items-center hover:-translate-y-1 hover:scale-105 hover:bg-indigo-200 duration-300">
-                    <AiOutlineCode size="2em" className="pr-2" fontSize="medium" color="action" />
-                    <a target="_blank" href={callout.href} className="no-underline" rel="noreferrer">
-                      Visit
+                  <button className="bg-[#f2e68f] p-2 rounded-lg transition ease-in-out flex justify-between items-center hover:-translate-y-1 hover:scale-105 hover:bg-[#F52D04] duration-300">
+                    <a target="_blank" href={callout.href} className="text-b font-semibold" rel="noreferrer">
+                      <AiOutlineCode size="2em" className="pr-2" fontSize="medium" color="action" />
                     </a>
                   </button>
                 </p>
-                <p className="text-base  text-slate-800">{callout.description}</p>
+                <p className="text-[#f2e68f]">{callout.description}</p>
                 <div className="py-3">
-                  <p className="text-lg pb-3 font-display  font-light">Stack</p>
+                  <p className="text-gradient mb-2">Stack</p>
                   <div className="flex justify-between items-center">
                     <div>
                       {callout.stack.map((st, e) => (
-                        <span className="inline-block bg-gray-200 bg-opacity-50 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" key={e}># {st}</span>
+                        <span className="inline-block bg-slate-100 rounded-full px-3 py-1 text-sm font-semibold text-black mr-2 mb-2" key={e}>
+                          # {st}
+                        </span>
                       ))}
                     </div>
-                    <p className="flex items-center">
+                    <p className="flex items-center text-[#f2e68f]">
                       <AiOutlineShareAlt size="1.5em" color={"action"} className="mx-2" />
                       <RWebShare
                         data={{
@@ -80,7 +81,6 @@ const Projects = () => {
                       >
                         <button>Share</button>
                       </RWebShare>
-                      
                     </p>
                   </div>
                 </div>
