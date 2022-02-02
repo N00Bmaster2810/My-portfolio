@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { FormGroup, TextField, Button, Alert } from "@mui/material";
 import { AiOutlineSend } from "react-icons/ai";
 
 const Contact = () => {
@@ -95,13 +94,13 @@ const Contact = () => {
               className="bg-transparent text-black border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500"
             ></textarea>
             <btn
-              className="w-1/5 mx-auto bg-sky-500 hover:bg-sky-900 mt-4 cursor-pointer rounded-full px-4 py-2 flex justify-center items-center"
+              className="w-2/5 md:w-1/5 mx-auto bg-sky-500 hover:bg-sky-900 mt-4 cursor-pointer rounded-full px-4 py-2 flex justify-center items-center"
               variant="contained"
               type="submit"
               onClick={(e) => handleSubmit(e)}
             >
               Send
-              <AiOutlineSend className="ml-5" />
+              <AiOutlineSend className="ml-2"/>
             </btn>
           </form>
         </div>
