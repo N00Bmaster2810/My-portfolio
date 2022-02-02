@@ -34,7 +34,9 @@ const Navbar = () => {
           <NavbarItem key={index} classProps={"text-white"} title={item.title} link={item.link} />
         ))}
         <a
-          href="\resume.pdf"
+          href="https://drive.google.com/file/d/1FjZa1HDRKnqtOBACdAetECZP3RUdoC6e/view?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
           download
           className={`mx-2 cursor-pointer text-white btn-grad transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300 p-1`}
         >
@@ -56,7 +58,9 @@ const Navbar = () => {
               <NavbarItem key={item + index} title={item.title} link={item.link} classProps="my-2 text-lg " />
             ))}
             <a
-              href="\resume.pdf"
+              href="https://drive.google.com/file/d/1FjZa1HDRKnqtOBACdAetECZP3RUdoC6e/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
               download
               className={`mx-2 cursor-pointer text-white btn-grad transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300 p-1 my-2 text-lg`}
             >
